@@ -202,7 +202,7 @@ function sendNotification(notification) {
                     // Firebase loses 'image' from the notification.
                     // And you must see this: https://github.com/firebase/quickstart-js/issues/71
                     data: notification,
-                    to: 'f4ihmD4EuBY:APA91bEgEF7gLklRZFJJjJomuGQprKZO072Nf0FkDwWfx2aXR9Sa8OF-_RbmndWSbq7WtkNSM19JJWnrXm5MMltKU4Rbv4urwMSq1K1HRDyw7ByiE0Ha_lmZYl12a-ADYJ0uyShDw-89'
+                    to: 'f7CuNZ--cbg:APA91bHmET6EFgcNoBgpRnrnFx_cfNy7vvY9DUEBsitBI5YKFgsknSuzhCQx2IQE-2NIslOiMijELTmDL2OF8SaI2vvYKvFzKYenFGdvnBTiQSOrul8HjQtbghsUC3HONw2SNiFFTUEo'
                 })
             }).then(function(response) {
                 return response.json();
