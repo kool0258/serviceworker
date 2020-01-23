@@ -184,6 +184,8 @@ function getToken() {
 function sendNotification(notification) {
     var key = 'AAAAeWUwT_Q:APA91bFSzj28miNXXdSKpwLjJAG8khaimFpdy4Kw0Y4_rJIrQGji9QcvKJ1yb7JLl3k2vpP-4w2M7via7UUw9TZOu1Ur0DeQX3QXM8O5ehJIcl25LP3j32g-gmmdG_-m5SSvZ0C-LjUf';
 
+    const noty = JSON.parse(JSON.stringify(notification));
+    delete noty.send_token;
     console.log('Send notification', notification);
 
     // hide last notification data
@@ -201,8 +203,8 @@ function sendNotification(notification) {
                 body: JSON.stringify({
                     // Firebase loses 'image' from the notification.
                     // And you must see this: https://github.com/firebase/quickstart-js/issues/71
-                    data: notification,
-                    to: 'f7CuNZ--cbg:APA91bHmET6EFgcNoBgpRnrnFx_cfNy7vvY9DUEBsitBI5YKFgsknSuzhCQx2IQE-2NIslOiMijELTmDL2OF8SaI2vvYKvFzKYenFGdvnBTiQSOrul8HjQtbghsUC3HONw2SNiFFTUEo'
+                    data: noty,
+                    to: notification.send_token
                 })
             }).then(function(response) {
                 return response.json();
